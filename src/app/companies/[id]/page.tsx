@@ -4,25 +4,21 @@ import { useApp } from "@/context/AppContext";
 import { Button } from "@/components/ui/Button";
 import { Card, CardHeader, CardContent } from "@/components/layouts/Card";
 import { format } from "date-fns";
-import { notFound, useRouter } from "next/navigation";
+import { notFound, useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { Phone, Mail, Linkedin, MessageCircle } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CommunicationModal } from "@/components/communications/CommunicationModal";
 import { useState } from "react";
 
-interface CompanyDetailPageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default function CompanyDetailPage({ params }: CompanyDetailPageProps) {
+export default function CompanyDetailPage() {
+  const params = useParams();
   const { state } = useApp();
   const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const companyId = params.id as string;
 
-  const company = state.companies.find((c) => c.id === params.id);
+  const company = state.companies.find((c) => c.id === companyId);
   if (!company) notFound();
 
   const communications = state.communications.filter(

@@ -12,6 +12,12 @@ type Props = {
   companyIds: string[];
   onSuccess?: () => void;
 };
+type FormData = {
+  methodId: string;
+  date: string;
+  notes: string;
+  status: "COMPLETED" | "SCHEDULED" | "CANCELLED";
+};
 
 export function CommunicationModal({
   isOpen,
@@ -20,7 +26,7 @@ export function CommunicationModal({
   onSuccess,
 }: Props) {
   const { state, dispatch } = useApp();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     methodId: "",
     date: new Date().toISOString().split("T")[0],
     notes: "",

@@ -123,7 +123,7 @@ export default function CompaniesPage() {
         <CommunicationModal
           isOpen={!!selectedCompany}
           onClose={() => setSelectedCompany(null)}
-          companyId={selectedCompany}
+          companyIds={[selectedCompany]}
           onSuccess={() => {
             setSelectedCompany(null);
             router.refresh();

@@ -13,6 +13,8 @@ type CompanyFormData = Omit<Company, "id" | "createdAt" | "updatedAt">;
 type Props = {
   initialData?: Company;
   isEditing?: boolean;
+  onSuccess?: () => void;
+  onCancel?: () => void;
 };
 
 export function CompanyForm({ initialData, isEditing }: Props) {

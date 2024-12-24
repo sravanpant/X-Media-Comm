@@ -5,7 +5,7 @@ import { AppProvider } from "@/context/AppContext";
 import type { Metadata } from "next";
 import Navbar from "@/components/ui/Navbar";
 
-export const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Communication Tracker",
