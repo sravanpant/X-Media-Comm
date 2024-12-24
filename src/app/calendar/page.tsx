@@ -125,7 +125,7 @@ export default function CalendarPage() {
         <CommunicationModal
           isOpen={!!selectedCompany}
           onClose={() => setSelectedCompany(null)}
-          companyId={selectedCompany}
+          companyIds={[selectedCompany]}
           onSuccess={() => setSelectedCompany(null)}
         />
       )}

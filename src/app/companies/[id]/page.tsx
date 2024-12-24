@@ -11,11 +11,13 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CommunicationModal } from "@/components/communications/CommunicationModal";
 import { useState } from "react";
 
-export default function CompanyDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+interface CompanyDetailPageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default function CompanyDetailPage({ params }: CompanyDetailPageProps) {
   const { state } = useApp();
   const router = useRouter();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -183,7 +185,7 @@ export default function CompanyDetailPage({
       <CommunicationModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        companyId={company.id}
+        companyIds={[company.id]}
         onSuccess={() => router.refresh()}
       />
     </div>
