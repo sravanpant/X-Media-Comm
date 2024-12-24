@@ -6,7 +6,7 @@ import { Card, CardHeader, CardContent } from "@/components/layouts/Card";
 import { format } from "date-fns";
 import { notFound, useRouter } from "next/navigation";
 import Link from "next/link";
-import { Phone, Mail, Linkedin, Calendar, MessageCircle } from "lucide-react";
+import { Phone, Mail, Linkedin, MessageCircle } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CommunicationModal } from "@/components/communications/CommunicationModal";
 import { useState } from "react";

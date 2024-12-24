@@ -1,7 +1,6 @@
 // src/app/dashboard/page.tsx
 "use client";
 
-import { useApp } from "@/context/AppContext";
 import { CompanyGrid } from "@/components/dashboard/CompanyGrid";
 import { NotificationCenter } from "@/components/notifications/NotificationCenter";
 import { CommunicationModal } from "@/components/communications/CommunicationModal";
@@ -12,7 +11,6 @@ import { Card } from "@/components/layouts/Card";
 export default function DashboardPage() {
   const [selectedCompanies, setSelectedCompanies] = useState<string[]>([]);
   const [showCommunicationModal, setShowCommunicationModal] = useState(false);
-  const { state } = useApp();
 
   const handleCompanySelect = (companyId: string) => {
     setSelectedCompanies((prev) =>
