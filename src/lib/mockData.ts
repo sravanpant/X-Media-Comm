@@ -17,6 +17,7 @@ export type CommunicationMethod = {
   description: string;
   sequence: number;
   isMandatory: boolean;
+  count: number;
 };
 
 export type Communication = {
@@ -62,6 +63,7 @@ export const mockCommunicationMethods: CommunicationMethod[] = [
     description: "Share content on LinkedIn",
     sequence: 1,
     isMandatory: true,
+    count: 20,
   },
   {
     id: "2",
@@ -69,6 +71,7 @@ export const mockCommunicationMethods: CommunicationMethod[] = [
     description: "Direct email communication",
     sequence: 2,
     isMandatory: true,
+    count: 30,
   },
   {
     id: "3",
@@ -76,6 +79,7 @@ export const mockCommunicationMethods: CommunicationMethod[] = [
     description: "Direct phone communication",
     sequence: 3,
     isMandatory: false,
+    count: 15,
   },
 ];
 
@@ -96,4 +100,30 @@ export const mockCommunications: Communication[] = [
     notes: "Follow-up email sent",
     status: "COMPLETED",
   },
+];
+
+export const mockMethodEffectivenessData = [
+  { method: "Email", effectiveness: 75 },
+  { method: "Phone", effectiveness: 60 },
+  { method: "In-person", effectiveness: 90 },
+];
+
+export const mockCommunicationTrendsData = [
+  { date: "2023-01-01", messages: 50 },
+  { date: "2023-01-02", messages: 75 },
+  { date: "2023-01-03", messages: 100 },
+];
+
+export const mockCompanyEngagementData = [
+  { company: "Company A", engagement: 80 },
+  { company: "Company B", engagement: 65 },
+  { company: "Company C", engagement: 90 },
+];
+
+export const mockCommunicationFrequencyData = [
+  { name: "Email", count: 120 },
+  { name: "Phone Call", count: 75 },
+  { name: "Meeting", count: 50 },
+  { name: "Video Conference", count: 30 },
+  { name: "Social Media", count: 20 },
 ];

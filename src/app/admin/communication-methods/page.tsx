@@ -30,6 +30,7 @@ export default function CommunicationMethodsPage() {
     name: "",
     description: "",
     isMandatory: false,
+    count: 0,
   });
 
   const sensors = useSensors(
@@ -48,7 +49,7 @@ export default function CommunicationMethodsPage() {
         sequence: state.communicationMethods.length + 1,
       },
     });
-    setNewMethod({ name: "", description: "", isMandatory: false });
+    setNewMethod({ name: "", description: "", isMandatory: false, count: 0 });
     setIsAddingMethod(false);
   };
 

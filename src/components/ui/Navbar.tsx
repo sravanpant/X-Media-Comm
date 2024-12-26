@@ -10,6 +10,7 @@ const navigation = [
   { name: "Dashboard", href: "/" },
   { name: "Companies", href: "/companies" },
   { name: "Calendar", href: "/calendar" },
+  { name: "Reports", href: "/reports" },
 ];
 
 export default function Navbar({ children }: { children: React.ReactNode }) {
